@@ -20,7 +20,7 @@ CREATE TABLE olist_customers_dataset (
 
 -- SUBINDO OS DADOS DA TABELA CUSTOMERS 
 BULK INSERT olist_customers_dataset
-FROM 'C:\Users\jennifer\OneDrive\Desktop\JV\Estudos\Projeto\Base de Dados\olist_customers_dataset.csv'
+FROM 'caminho\para\olist_customers_dataset.csv'
 WITH 
 ( 
   FIRSTROW = 2,
@@ -42,7 +42,7 @@ CREATE TABLE olist_geolocation_dataset (
 );
 
 BULK INSERT olist_geolocation_dataset 
-FROM 'C:\Users\jennifer\OneDrive\Desktop\JV\Estudos\Projeto\Base de Dados\olist_geolocation_dataset.csv'
+FROM 'caminho\para\olist_geolocation_dataset.csv'
 WITH 
 (
   FIRSTROW = 2,
@@ -54,8 +54,6 @@ WITH
 
 
 -- Subindo os dados da tabela olist_products_dataset 
-
-"","","product_description_lenght","product_photos_qty","product_weight_g","product_length_cm","product_height_cm","product_width_cm"
 
 CREATE TABLE olist_products_dataset (
      product_id  VARCHAR(255) PRIMARY KEY,  
@@ -70,7 +68,7 @@ CREATE TABLE olist_products_dataset (
 )
 
 BULK INSERT olist_products_dataset
-FROM 'C:\Users\jennifer\OneDrive\Desktop\JV\Estudos\Projeto\Base de Dados\olist_products_dataset.csv'
+FROM 'caminho\para\olist_products_dataset.csv'
 WITH 
 (
   FIRSTROW = 2,
