@@ -88,8 +88,8 @@ CREATE TABLE olist_sellers_dataset (
         seller_state VARCHAR(5)
 )
 
-BULK INSERT olist_products_dataset
-FROM 'caminho\para\olist_products_dataset.csv'
+BULK INSERT olist_sellers_dataset
+FROM 'C:\Users\jennifer\OneDrive\Desktop\JV\Estudos\Projeto\Base de Dados\olist_sellers_dataset.csv'
 WITH 
 (
   FIRSTROW = 2,
@@ -203,6 +203,16 @@ WITH
   ROWTERMINATOR = '0x0a',        -- Se der erro de linha, tente mudar para '0x0a'
   CODEPAGE = '65001'           -- UTF-8 para não quebrar a acentuação
 )
+
+1 - Chaves primarias de cada coluna 
+
+ALTER TABLE olist_customers_dataset ADD CONSTRAINT PK_customers PRIMARY KEY (customer_id);
+
+ALTER TABLE olist_products_dataset ADD CONSTRAINT PK_products PRIMARY KEY (product_id);
+
+ALTER TABLE olist_sellers_dataset ADD CONSTRAINT PK_sellers PRIMARY KEY (seller_id);
+
+ALTER TABLE olist_orders_dataset ADD CONSTRAINT PK_orders PRIMARY KEY (order_id);
 
 
 
