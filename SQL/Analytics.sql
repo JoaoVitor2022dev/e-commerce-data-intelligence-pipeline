@@ -153,3 +153,12 @@ FROM olist_order_payments_dataset
 GROUP BY [payment_type]
 
 ORDER BY [TOTAL] DESC;
+
+
+
+
+
+
+
+
+
