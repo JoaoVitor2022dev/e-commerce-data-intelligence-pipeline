@@ -34,8 +34,6 @@ EXEC sp_ValorTotalPorPedido
      a quantidade de itens vendidos e o valor das vendas 
    ============================================================ */
 
-
-
 CREATE PROCEDURE sp_VendasPorCategoria
 AS
   BEGIN
