@@ -1,5 +1,5 @@
  /* 
-
+================================================================================
 🟢 PRIORIDADE ALTA
 
 1. Faturamento por categoria
@@ -8,6 +8,7 @@ João, preciso saber quais categorias geram mais receita. Cria
 uma procedure que mostre categoria, quantidade vendida e total faturado. 
 Ordena por faturamento decrescente.  
 
+================================================================================
 */ 
 
 
@@ -19,7 +20,7 @@ BEGIN
     SELECT 
         [product_category_name] AS [Categoria],
         COUNT(*) AS [Quantidade], 
-        SUM([price]) AS [Valor_Faturado]
+        SUM([price] + [freight_value]) AS [Valor_Faturado_Com_Frete]
     FROM [olist_order_items_dataset] AS [Itens_pedidos]
     LEFT JOIN [olist_ecommerce].[dbo].[olist_orders_dataset] AS [Pedido]
         ON [Pedido].[order_id] = [Itens_pedidos].[order_id]
@@ -31,10 +32,4 @@ BEGIN
 END
 
 EXEC RelatorioFaturamentoPorCategoria @Status_pedido = 'delivered'
-
-
-
-
-
-
 
