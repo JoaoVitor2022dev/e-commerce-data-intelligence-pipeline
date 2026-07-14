@@ -16,7 +16,7 @@ RESUMO DOS INSIGHTS E MÉTRICAS:
 1. VISÃO GERAL DOS DADOS (Tradução e estrutura das colunas)
 ================================================================================
 */
-SELECT TOP (1000) 
+   SELECT TOP (1000) 
        [order_id]                       -- ID único do pedido
       ,[customer_id]                    -- ID do cliente que fez a compra
       ,[order_status]                   -- Status do pedido (ex: entregue, cancelado, faturado)
@@ -25,7 +25,7 @@ SELECT TOP (1000)
       ,[order_delivered_carrier_date]   -- Data e hora em que o pedido foi entregue à transportadora
       ,[order_delivered_customer_date]  -- Data e hora real da entrega ao cliente
       ,[order_estimated_delivery_date]  -- Data estimada de entrega que foi informada ao cliente
-  FROM [olist_ecommerce].[dbo].[olist_orders_dataset]
+   FROM [olist_ecommerce].[dbo].[olist_orders_dataset]
 
 
 /*
